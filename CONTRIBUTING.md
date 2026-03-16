@@ -107,7 +107,7 @@ All documents in this repository must follow these standards:
 Use the GitHub issue templates provided:
 
 - **Bug Report** — for broken links, incorrect information, formatting issues
-- **Document Request** — for proposing new standard documents or categories
+- **Feature Request** — for proposing new standard documents or categories
 
 ---
 
