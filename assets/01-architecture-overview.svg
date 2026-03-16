@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Inter, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f23"/>
+      <stop offset="100%" stop-color="#1a1a3e"/>
+    </linearGradient>
+    <linearGradient id="reactGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#61dafb"/>
+      <stop offset="100%" stop-color="#21a1f1"/>
+    </linearGradient>
+    <linearGradient id="renderGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="claudeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4a574"/>
+      <stop offset="100%" stop-color="#c08552"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" fill="#e2e8f0" font-size="26" font-weight="700" letter-spacing="1">REMOTION × CLAUDE CODE — ARCHITECTURE OVERVIEW</text>
+  <line x1="350" y1="62" x2="850" y2="62" stroke="#61dafb" stroke-width="2" opacity="0.5"/>
+
+  <!-- Layer 1: Claude Code (top) -->
+  <rect x="60" y="90" width="1080" height="110" rx="12" fill="#1e1e3a" stroke="url(#claudeGrad)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="110" y="125" fill="#d4a574" font-size="13" font-weight="600" letter-spacing="2">LAYER 1 — AGENTIC INTERFACE</text>
+  <rect x="90" y="140" width="200" height="44" rx="8" fill="#2a2a4a" stroke="#d4a574" stroke-width="1"/>
+  <text x="190" y="167" text-anchor="middle" fill="#f5f0eb" font-size="13" font-weight="500">Claude Code CLI</text>
+  <rect x="320" y="140" width="200" height="44" rx="8" fill="#2a2a4a" stroke="#d4a574" stroke-width="1"/>
+  <text x="420" y="167" text-anchor="middle" fill="#f5f0eb" font-size="13" font-weight="500">CLAUDE.md Context</text>
+  <rect x="550" y="140" width="200" height="44" rx="8" fill="#2a2a4a" stroke="#d4a574" stroke-width="1"/>
+  <text x="650" y="167" text-anchor="middle" fill="#f5f0eb" font-size="13" font-weight="500">Natural Language → Code</text>
+  <rect x="780" y="140" width="200" height="44" rx="8" fill="#2a2a4a" stroke="#d4a574" stroke-width="1"/>
+  <text x="880" y="167" text-anchor="middle" fill="#f5f0eb" font-size="13" font-weight="500">Props / Data Pipeline</text>
+  <rect x="1010" y="140" width="110" height="44" rx="8" fill="#2a2a4a" stroke="#d4a574" stroke-width="1"/>
+  <text x="1065" y="167" text-anchor="middle" fill="#f5f0eb" font-size="13" font-weight="500">MCP Tools</text>
+
+  <!-- Arrow down -->
+  <path d="M600,200 L600,230" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <defs><marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#61dafb"/></marker></defs>
+
+  <!-- Layer 2: React / Remotion Composition -->
+  <rect x="60" y="230" width="1080" height="140" rx="12" fill="#1e1e3a" stroke="url(#reactGrad)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="110" y="265" fill="#61dafb" font-size="13" font-weight="600" letter-spacing="2">LAYER 2 — REACT COMPOSITION ENGINE</text>
+
+  <rect x="90" y="280" width="150" height="70" rx="8" fill="#172554" stroke="#61dafb" stroke-width="1"/>
+  <text x="165" y="305" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">&lt;Composition&gt;</text>
+  <text x="165" y="323" text-anchor="middle" fill="#bfdbfe" font-size="10">Root.tsx registry</text>
+  <text x="165" y="338" text-anchor="middle" fill="#7dd3fc" font-size="10">metadata + schema</text>
+
+  <rect x="270" y="280" width="150" height="70" rx="8" fill="#172554" stroke="#61dafb" stroke-width="1"/>
+  <text x="345" y="305" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">&lt;Sequence&gt;</text>
+  <text x="345" y="323" text-anchor="middle" fill="#bfdbfe" font-size="10">Time-shifted children</text>
+  <text x="345" y="338" text-anchor="middle" fill="#7dd3fc" font-size="10">from / durationInFrames</text>
+
+  <rect x="450" y="280" width="150" height="70" rx="8" fill="#172554" stroke="#61dafb" stroke-width="1"/>
+  <text x="525" y="305" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">useCurrentFrame()</text>
+  <text x="525" y="323" text-anchor="middle" fill="#bfdbfe" font-size="10">Frame-as-state</text>
+  <text x="525" y="338" text-anchor="middle" fill="#7dd3fc" font-size="10">deterministic render</text>
+
+  <rect x="630" y="280" width="150" height="70" rx="8" fill="#172554" stroke="#61dafb" stroke-width="1"/>
+  <text x="705" y="305" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">interpolate()</text>
+  <text x="705" y="323" text-anchor="middle" fill="#bfdbfe" font-size="10">Value mapping</text>
+  <text x="705" y="338" text-anchor="middle" fill="#7dd3fc" font-size="10">+ spring() physics</text>
+
+  <rect x="810" y="280" width="150" height="70" rx="8" fill="#172554" stroke="#61dafb" stroke-width="1"/>
+  <text x="885" y="305" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">&lt;Series&gt; / &lt;Loop&gt;</text>
+  <text x="885" y="323" text-anchor="middle" fill="#bfdbfe" font-size="10">Sequential + repeat</text>
+  <text x="885" y="338" text-anchor="middle" fill="#7dd3fc" font-size="10">&lt;Freeze&gt; hold frame</text>
+
+  <rect x="990" y="280" width="130" height="70" rx="8" fill="#172554" stroke="#61dafb" stroke-width="1"/>
+  <text x="1055" y="305" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">@remotion/*</text>
+  <text x="1055" y="323" text-anchor="middle" fill="#bfdbfe" font-size="10">media-utils, shapes</text>
+  <text x="1055" y="338" text-anchor="middle" fill="#7dd3fc" font-size="10">transitions, skia</text>
+
+  <!-- Arrow down -->
+  <path d="M600,370 L600,400" stroke="#f97316" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <defs><marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/></marker></defs>
+
+  <!-- Layer 3: Render Pipeline -->
+  <rect x="60" y="400" width="1080" height="120" rx="12" fill="#1e1e3a" stroke="url(#renderGrad)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="110" y="435" fill="#f97316" font-size="13" font-weight="600" letter-spacing="2">LAYER 3 — RENDER PIPELINE</text>
+
+  <rect x="90" y="450" width="170" height="50" rx="8" fill="#451a03" stroke="#f97316" stroke-width="1"/>
+  <text x="175" y="472" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="600">Webpack / Rspack</text>
+  <text x="175" y="488" text-anchor="middle" fill="#fed7aa" font-size="10">Bundle → Serve URL</text>
+
+  <path d="M270,475 L300,475" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <rect x="310" y="450" width="170" height="50" rx="8" fill="#451a03" stroke="#f97316" stroke-width="1"/>
+  <text x="395" y="472" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="600">Headless Chrome</text>
+  <text x="395" y="488" text-anchor="middle" fill="#fed7aa" font-size="10">Frame-by-frame capture</text>
+
+  <path d="M490,475 L520,475" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <rect x="530" y="450" width="170" height="50" rx="8" fill="#451a03" stroke="#f97316" stroke-width="1"/>
+  <text x="615" y="472" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="600">Rust FFmpeg</text>
+  <text x="615" y="488" text-anchor="middle" fill="#fed7aa" font-size="10">Encode + mux audio</text>
+
+  <path d="M710,475 L740,475" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <rect x="750" y="450" width="170" height="50" rx="8" fill="#451a03" stroke="#ef4444" stroke-width="1"/>
+  <text x="835" y="472" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="600">Concurrency Control</text>
+  <text x="835" y="488" text-anchor="middle" fill="#fed7aa" font-size="10">Parallel tab rendering</text>
+
+  <rect x="950" y="450" width="170" height="50" rx="8" fill="#451a03" stroke="#ef4444" stroke-width="1"/>
+  <text x="1035" y="472" text-anchor="middle" fill="#fdba74" font-size="12" font-weight="600">Lambda / Cloud Run</text>
+  <text x="1035" y="488" text-anchor="middle" fill="#fed7aa" font-size="10">Serverless at scale</text>
+
+  <!-- Arrow down -->
+  <path d="M600,520 L600,550" stroke="#22c55e" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <defs><marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+
+  <!-- Layer 4: Output -->
+  <rect x="60" y="550" width="1080" height="100" rx="12" fill="#1e1e3a" stroke="url(#outputGrad)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="110" y="585" fill="#22c55e" font-size="13" font-weight="600" letter-spacing="2">LAYER 4 — OUTPUT FORMATS</text>
+
+  <g transform="translate(120,600)">
+    <rect width="110" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="55" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">MP4 (H.264)</text>
+  </g>
+  <g transform="translate(250,600)">
+    <rect width="110" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="55" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">H.265 / HEVC</text>
+  </g>
+  <g transform="translate(380,600)">
+    <rect width="100" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="50" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">WebM (VP8)</text>
+  </g>
+  <g transform="translate(500,600)">
+    <rect width="100" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="50" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">ProRes</text>
+  </g>
+  <g transform="translate(620,600)">
+    <rect width="100" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="50" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">GIF</text>
+  </g>
+  <g transform="translate(740,600)">
+    <rect width="100" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="50" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">PNG / JPEG</text>
+  </g>
+  <g transform="translate(860,600)">
+    <rect width="120" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="60" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">AAC / WAV / MP3</text>
+  </g>
+  <g transform="translate(1000,600)">
+    <rect width="110" height="36" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="55" y="23" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">Sequences (stills)</text>
+  </g>
+
+  <!-- Version badge -->
+  <rect x="1040" y="14" width="140" height="28" rx="14" fill="#1e1e3a" stroke="#61dafb" stroke-width="1"/>
+  <text x="1110" y="33" text-anchor="middle" fill="#61dafb" font-size="11" font-weight="600">Remotion v4.x / v5.x</text>
+
+  <!-- Footer -->
+  <text x="600" y="680" text-anchor="middle" fill="#475569" font-size="10">Technical Guide: Remotion × Claude Code</text>
+</svg>
