@@ -55,8 +55,8 @@ docs(<scope>): <subject>
 
 ```bash
 # Examples
-git commit -m "docs(boilerplate): add API design standard"
-git commit -m "docs(tech-stack): update Node.js version to 24"
+git commit -m "docs(guide): add API design standard"
+git commit -m "docs(guide): update Node.js version to 24"
 git commit -m "docs(repo): add GitHub issue templates"
 ```
 
