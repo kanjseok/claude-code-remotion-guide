@@ -27,7 +27,7 @@ git checkout -b feature/your-topic
 
 # 3. Make your changes, then commit
 git add <specific-files>
-git commit -m "docs(boilerplate): add API design standard"
+git commit -m "docs(guide): add animation system section"
 
 # 4. Push and open a Pull Request
 git push origin feature/your-topic
