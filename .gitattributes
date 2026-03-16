@@ -1,0 +1,23 @@
+# Enforce consistent line endings
+* text=auto eol=lf
+
+# Markdown
+*.md text eol=lf diff=markdown linguist-documentation
+
+# HTML
+*.html text eol=lf diff=html
+
+# YAML
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# SVG (text-based vector graphics)
+*.svg text eol=lf linguist-documentation
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary

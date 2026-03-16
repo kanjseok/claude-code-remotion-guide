@@ -1,0 +1,42 @@
+name: Feature Request
+description: Propose new content, sections, or improvements
+labels: ["enhancement"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Feature Title
+      description: A concise title for the proposed addition or improvement
+      placeholder: "e.g., Add WebGL shader integration guide"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation / Problem
+      description: What problem does this solve or what gap does it fill?
+      placeholder: "The current guide doesn't cover..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the content or change you'd like to see
+      placeholder: "Add a new section covering..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative approaches you considered
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Links, references, or examples that support this request
