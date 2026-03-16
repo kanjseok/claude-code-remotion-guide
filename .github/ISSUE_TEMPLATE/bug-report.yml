@@ -59,6 +59,6 @@ body:
       label: Environment
       description: Relevant environment details if applicable
       placeholder: |
-        - OS: macOS 15.x
-        - Node.js: 22.x
-        - Remotion: 4.x
+        - OS: [e.g., macOS 15, Windows 11]
+        - Node.js: [e.g., 22.x]
+        - Remotion: [e.g., 4.x]

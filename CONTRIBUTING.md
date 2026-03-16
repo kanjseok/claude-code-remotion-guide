@@ -27,7 +27,7 @@ git checkout -b feature/your-topic
 
 # 3. Make your changes, then commit
 git add <specific-files>
-git commit -m "docs(boilerplate): add API design standard"
+git commit -m "docs(guide): add animation system section"
 
 # 4. Push and open a Pull Request
 git push origin feature/your-topic
@@ -55,8 +55,8 @@ docs(<scope>): <subject>
 
 ```bash
 # Examples
-git commit -m "docs(boilerplate): add API design standard"
-git commit -m "docs(tech-stack): update Node.js version to 24"
+git commit -m "docs(guide): add API design standard"
+git commit -m "docs(guide): update Node.js version to 24"
 git commit -m "docs(repo): add GitHub issue templates"
 ```
 
@@ -107,7 +107,7 @@ All documents in this repository must follow these standards:
 Use the GitHub issue templates provided:
 
 - **Bug Report** — for broken links, incorrect information, formatting issues
-- **Document Request** — for proposing new standard documents or categories
+- **Feature Request** — for proposing new standard documents or categories
 
 ---
 
